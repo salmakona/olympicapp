@@ -1,0 +1,24 @@
+<div class="jumbotron text-center">
+    <h1>All Users</h1>
+</div>
+
+<table class="table table-bordered table-hover table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+             <th>Address</th>
+        </tr>
+     </thead>
+        <tbody>
+            <% for (var users of users) { %>
+                <tr>
+                    <td><%= users.name %></td>
+                    <td><%= users.email %></td>
+                     <td><%= users.number %></td>
+                      <td><%= users.address %></td>
+                </tr>
+            <% } %>
+        </tbody>
+</table>

@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Events App</title>
-
     <!-- css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-
     <!-- header -->
     <header id="site-header">
         <div class="navbar navbar-inverse">
@@ -17,27 +15,25 @@
                 <div class="navbar-header">
                     <a href="/" class="navbar-brand">Events</a>
                 </div>
-
                 <ul class="nav navbar-nav">
-                      <a href="/home" class="navbar-brand">showText</a>
+                    <li><a href="/home" class="navbar-brand">showText</a></li>
                     <li><a href="/events">Events</a></li>
                     <li><a href="/events/create">Create an Event</a></li>
+                    <li><a href="/users">View all Users</a></li>
+                    <li><a href="/users/create">Create User Account</a></li>
                 </ul>
             </div>
         </div>
     </header>
-
     <!-- main -->
     <main id="site-main">
-    <div class="container">
-        <%- body %>
-    </div>
+        <div class="container">
+            <%- body %>
+        </div>
     </main>
-
     <!-- footer -->
     <footer id="site-footer">
         Copyright &copy; 2016 Olympics
     </footer>
-    
 </body>
 </html>

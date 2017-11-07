@@ -2,7 +2,8 @@
 const express      = require('express'),
   router           = express.Router(),
   mainController   = require('./controllers/main.controller'),
-  eventsController = require('./controllers/events.controller');
+  eventsController = require('./controllers/events.controller'),
+  usersController = require('./controllers/users.controller');
 
 // export router
 module.exports = router;
@@ -13,10 +14,7 @@ router.get('/', mainController.showHome);
 router.get('/home', mainController.showText);
 // router.get('/', mainController.showMain);
 
-
-
-
-// event routes
+// event routes===========================================================
 router.get('/events',       eventsController.showEvents);
 
 // seed events
@@ -35,3 +33,10 @@ router.post('/events/:slug',     eventsController.processEdit);
 
 // delete events
 router.get('/events/:slug/delete', eventsController.deleteEvent);
+
+//user routes =============================================================
+
+// router.get('/', usersController.showUsers);
+router.get('/users',       usersController.showUsers);
+router.get('/users/create',     usersController.createUser);
+router.post('/users/create',    usersController.processCreate);
